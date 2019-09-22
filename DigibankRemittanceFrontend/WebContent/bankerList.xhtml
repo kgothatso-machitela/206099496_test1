@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+
+<h:head>
+	<title>Digibank Remittance</title>
+</h:head>
+<h:body>
+	<center>
+		<h2>
+			<h:outputText value="International Money Transfer Records" />
+		</h2>
+	</center>
+	<h:form>
+		<h:dataTable value="#{bankercontroller.bankerList}" var="bankerList"
+			border="2">
+			<h:column>
+				<f:facet name="header">Name</f:facet>
+				<h:outputText value="#{bankerList.name}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Source Passport</f:facet>
+				<h:outputText value="#{bankerList.sourcePassport}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Destination Passport</f:facet>
+				<h:outputText value="#{bankerList.destinationPassport}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Destination Bank</f:facet>
+				<h:outputText value="#{bankerList.destinationBank}" />
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">Destination Country</f:facet>
+				<h:outputText value="#{bankerList.destationCountry}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Account Number</f:facet>
+				<h:outputText value="#{bankerList.accountNumber}" />
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">Amount</f:facet>
+				<h:outputText value="#{bankerList.amount}" />
+			</h:column>
+
+		</h:dataTable>
+	</h:form>
+</h:body>
+</html>

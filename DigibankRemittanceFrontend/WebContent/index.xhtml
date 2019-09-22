@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Digibank Remittance</title>
+</h:head>
+<h:body>
+	<h2>Digibank Remittance (International money transfers)</h2>
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Name : " />
+			<h:inputText value="#{bankercontroller.banker.name}"></h:inputText>
+
+			<h:outputLabel value="Source Passport : " />
+			<h:inputText value="#{bankercontroller.banker.sourcePassport}"></h:inputText>
+
+			<h:outputLabel value="Destination Passport : " />
+			<h:inputText value="#{bankercontroller.banker.destinationPassport}"></h:inputText>
+
+			<h:outputLabel value="Destination Bank : " />
+			<h:inputText value="#{bankercontroller.banker.destinationBank}"></h:inputText>
+
+			<h:outputLabel value="Destination Country : " />
+			<h:inputText value="#{bankercontroller.banker.destationCountry}"></h:inputText>
+
+			<h:outputLabel value="Account Number : " />
+			<h:inputText value="#{bankercontroller.banker.accountNumber}"></h:inputText>
+
+			<h:outputLabel value="Amount : " />
+			<h:inputText value="#{bankercontroller.banker.amount}"></h:inputText>
+
+		</h:panelGrid>
+		<h:commandButton value="submit"
+			action="#{bankercontroller.addNewBanker}"></h:commandButton>
+	</h:form>
+</h:body>
+</html>
